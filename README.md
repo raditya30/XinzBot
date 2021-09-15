@@ -2,7 +2,7 @@
 <img src="https://raw.githubusercontent.com/raditya30/XinzBot/main/media/eagle.png" alt="XINZ BOT" width="128" height="128"/>
 </p>
 <p align="center">
-<a href="#"><img title="XINZ BOT" src="https://img.shields.io/badge/XINZ BOT-green?colorA=%23ff0000&colorB=%23017e40&style=for-the-badge"></a>
+<a href="#"><img title="EAGLE BOT" src="https://img.shields.io/badge/EAGLE BOT-green?colorA=%23ff0000&colorB=%23017e40&style=for-the-badge"></a>
 </p>
 <p align="center">
 <a href="https://github.com/raditya30"><img title="Author" src="https://img.shields.io/badge/Author-raditya30-red.svg?style=for-the-badge&logo=github"></a>
