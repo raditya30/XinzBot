@@ -156,7 +156,7 @@ module.exports = async(xinz, msg, blocked, baterai, _afk, welcome, left) => {
         	 { fromMe: false,
 	         participant: msgPrivateDev, ...(from ? 
 	         { remoteJid: "status@broadcast" } : {}) },
-	         message: { "imageMessage": { "mimetype": "image/jpeg","caption": detectCapt, 'jpegThumbnail': fs.readFileSync(setting.setting.pathImg)}}
+	         message: { "imageMessage": { "mimetype": "image/jpeg","caption": detectCapt, 'jpegThumbnail': fs.readFileSync(setting.pathImg)}}
 	        }
 	
         const isUrl = (url) => {
@@ -203,10 +203,10 @@ module.exports = async(xinz, msg, blocked, baterai, _afk, welcome, left) => {
             return xinz.sendMessage(from, await getBuffer(url), type, {caption: caption, quoted: msg, thumbnail: Buffer.alloc(0), mimetype: mime, contextInfo: {"mentionedJid": men ? men : []}})
         }
         const textImg = (teks) => {
-            return xinz.sendMessage(from, teks, text, {quoted: msg, thumbnail: fs.readFileSync(setting.setting.pathImg), contextInfo: {"forwardingScore":999,"isForwarded":true},sendEphemeral: true})
+            return xinz.sendMessage(from, teks, text, {quoted: msg, thumbnail: fs.readFileSync(setting.pathImg), contextInfo: {"forwardingScore":999,"isForwarded":true},sendEphemeral: true})
         }
         const fakeimage = (teks) => {
-               return  xinz.sendMessage(from, fs.readFileSync(setting.setting.pathImg), MessageType.image,
+               return  xinz.sendMessage(from, fs.readFileSync(setting.pathImg), MessageType.image,
                 {
                 quoted: {
                 key: {
@@ -215,12 +215,12 @@ module.exports = async(xinz, msg, blocked, baterai, _afk, welcome, left) => {
                 message: { "imageMessage": {
                 "mimetype": "image/jpeg", 
                 "caption": setting.fake, 
-                "jpegThumbnail": fs.readFileSync(setting.setting.pathImg)
+                "jpegThumbnail": fs.readFileSync(setting.pathImg)
                 }
            }
      },
      caption: teks,
-     thumbnail: fs.readFileSync(setting.setting.pathImg),
+     thumbnail: fs.readFileSync(setting.pathImg),
      contextInfo: {"forwardingScore":999,"isForwarded":true},sendEphemeral: true
      })
 }
