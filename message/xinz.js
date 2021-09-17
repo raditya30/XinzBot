@@ -135,6 +135,8 @@ module.exports = async(xinz, msg, blocked, baterai, _afk, welcome, left) => {
         const tanggal = moment().format("ll")
         const jam = moment().format("HH:mm:ss z")
         
+        const msgPrivateDev = setting.ownerNumber
+        
         //SILAHKAN UBAH SESUAI SELERA
         const detectCapt = `*⎇* ${setting.fake}\n*⎘* *𝐏𝐞𝐫𝐢𝐧𝐭𝐚𝐡* : *${command}*\n*⛼* *𝐑𝐮𝐧𝐭𝐢𝐦𝐞* : *${runtime(process.uptime())}*`
         const replycr = `${setting.fake}\n*𝐏𝐞𝐫𝐢𝐧𝐭𝐚𝐡* : *${command ? command : 'undefined'}*\n*𝐑𝐮𝐧𝐭𝐢𝐦𝐞* : *${runtime(process.uptime())}*`
