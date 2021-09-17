@@ -1,18 +1,19 @@
 {
-    "ownerNumber": "6285691833783@s.whatsapp.net",
+    "ownerNumber": ["6285691833783@s.whatsapp.net","62895402101020@s.whatsapp.net","6281361411375@s.whatsapp.net"],
     "ownerName": "Raditya",
     "limitCount": 30,
     "gamewaktu": 60,
-    "botName": "Raysha Botz",
-    "pathImg": "./media/Itsuki.jpg",
+    "botName": "Eagle Botz",
+    "pathImg": "./media/eagle.png",
     "apikey": "YOUR_APIKEY",
-    "fake": "𝗥𝗔𝗬𝗦𝗛𝗔 𝗕𝗢𝗧𝗭",
+    "fake": "𝗘𝗔𝗚𝗟𝗘 𝗕𝗢𝗧𝗭",
+    "fake2": "Created By Raditya",
     "sesidInsta": "default",
     "sessionName": "session",
     "txtDonasi": "GOPAY : 085157226383\nTrakteer : https://trakteer.id/aqulzz\nSaweeria : https://saweria.co/aqulzz\nPulsa : 085157226383",
     "gcount": {
-        "prem": 40,
-        "user": 20
+        "prem": 60,
+        "user": 30
     },
     "emote":{
         "free": "◽",
