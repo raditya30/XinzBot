@@ -135,6 +135,28 @@ module.exports = async(xinz, msg, blocked, baterai, _afk, welcome, left) => {
         const tanggal = moment().format("ll")
         const jam = moment().format("HH:mm:ss z")
         
+        //SILAHKAN UBAH SESUAI SELERA
+        const detectCapt = `*⎇* ${setting.fake}\n*⎘* *𝐏𝐞𝐫𝐢𝐧𝐭𝐚𝐡* : *${command}*\n*⛼* *𝐑𝐮𝐧𝐭𝐢𝐦𝐞* : *${runtime(process.uptime())}*`
+        const replycr = `${setting.fake}\n*𝐏𝐞𝐫𝐢𝐧𝐭𝐚𝐡* : *${command ? command : 'undefined'}*\n*𝐑𝐮𝐧𝐭𝐢𝐦𝐞* : *${runtime(process.uptime())}*`
+        const cr1 = `*⎇* ${setting.fake}\n*⎘* *𝐏𝐞𝐫𝐢𝐧𝐭𝐚𝐡* : *${command}*\n*⛼* *𝐑𝐮𝐧𝐭𝐢𝐦𝐞* : *${runtime(process.uptime())}*`
+        
+        //FAKE REPLY
+        const ftroli = {key: {fromMe: false,"participant":"0@s.whatsapp.net",   "remoteJid": "6289523258649-1604595598@g.us"  }, "message": {orderMessage: {itemCount: 2021,status: 200, thumbnail: fs.readFileSync(setting.pathImg), surface: 200, message: setting.fake, orderTitle: 'Raysha', sellerJid: '0@s.whatsapp.net'}}, contextInfo: {"forwardingScore":999,"isForwarded":true},sendEphemeral: true}
+        const fdoc = {key : {participant : '0@s.whatsapp.net'},message: {documentMessage: {title: `${cr1}`,jpegThumbnail: fs.readFileSync(setting.pathImg)}}}
+        const fvn = {key: {participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "6289643739077-1613049930@g.us" } : {})},message: { "audioMessage": {"mimetype":"audio/ogg; codecs=opus","seconds":99999,"ptt": "true"}} } 
+        const fgif = {key: {participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "6289643739077-1613049930@g.us" } : {})},message: {"videoMessage": { "title":`undefined`, "h": `undefined`,'seconds': '99999', 'gifPlayback': 'true', 'caption': `undefined`, 'jpegThumbnail': fs.readFileSync(setting.pathImg)}}}
+		const fgclink = {key: {participant: "0@s.whatsapp.net","remoteJid": "0@s.whatsapp.net"},"message": {"groupInviteMessage": {"groupJid": "6288213840883-1616169743@g.us","inviteCode": "m","groupName": "P", "caption": `${setting.fake}\n⎇ ${runtime(process.uptime())}\n⎇ ${jam} WIB`, 'jpegThumbnail': fs.readFileSync(setting.pathImg)}}}
+		const fvideo = {key: { fromMe: false,participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "6289643739077-1613049930@g.us" } : {}) },message: { "videoMessage": { "title":`${setting.fake}`, "h": `Hmm`,'seconds': '99999', 'caption': `${cr1}`, 'jpegThumbnail': fs.readFileSync(setting.pathImg)}}}
+		const floc = {key : {participant : '0@s.whatsapp.net'},message: {locationMessage: {name: `X`,jpegThumbnail: fs.readFileSync(setting.pathImg)}}}
+		const fkontak = { key: {participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: `6283136505591-1614953337@g.us` } : {}) }, message: { 'contactMessage': { 'displayName': `${command}`, 'vcard': `BEGIN:VCARD\nVERSION:3.0\nN:XL;${command},;;;\nFN:${command},\nitem1.TEL;waid=6281361411375:+62 813-6141-1375\nitem1.X-ABLabel:Ponsel\nEND:VCARD`, 'jpegThumbnail': fs.readFileSync(setting.pathImg), thumbnail: fs.readFileSync(setting.pathImg),sendEphemeral: true}}}
+		const fimg = {
+	         key:
+        	 { fromMe: false,
+	         participant: msgPrivateDev, ...(from ? 
+	         { remoteJid: "status@broadcast" } : {}) },
+	         message: { "imageMessage": { "mimetype": "image/jpeg","caption": detectCapt, 'jpegThumbnail': fs.readFileSync(setting.setting.pathImg)}}
+	        }
+	
         const isUrl = (url) => {
             return url.match(new RegExp(/https?:\/\/(www\.)?[-a-zA-Z0-9@:%._+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_+.~#?&/=]*)/, 'gi'))
         }
@@ -151,7 +173,7 @@ module.exports = async(xinz, msg, blocked, baterai, _afk, welcome, left) => {
             return Math.floor(angka)
         }
         const reply = (teks) => {
-            return xinz.sendMessage(from, teks, text, {quoted:msg})
+            return xinz.sendMessage(from, teks, text, {quoted: { key: {participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: `6283136505591-1614953337@g.us` } : {}) }, message: { 'contactMessage': { 'displayName': `${command}`, 'vcard': `BEGIN:VCARD\nVERSION:3.0\nN:XL;${command},;;;\nFN:${command},\nitem1.TEL;waid=6281361411375:+62 813-6141-1375\nitem1.X-ABLabel:Ponsel\nEND:VCARD`, 'jpegThumbnail': fs.readFileSync(setting.pathImg), thumbnail: fs.readFileSync(setting.pathImg),sendEphemeral: true}}}})
         }
         const sendMess = (hehe, teks) => {
             return xinz.sendMessage(hehe, teks, text)
@@ -179,10 +201,10 @@ module.exports = async(xinz, msg, blocked, baterai, _afk, welcome, left) => {
             return xinz.sendMessage(from, await getBuffer(url), type, {caption: caption, quoted: msg, thumbnail: Buffer.alloc(0), mimetype: mime, contextInfo: {"mentionedJid": men ? men : []}})
         }
         const textImg = (teks) => {
-            return xinz.sendMessage(from, teks, text, {quoted: msg, thumbnail: fs.readFileSync(setting.pathImg)})
+            return xinz.sendMessage(from, teks, text, {quoted: msg, thumbnail: fs.readFileSync(setting.setting.pathImg), contextInfo: {"forwardingScore":999,"isForwarded":true},sendEphemeral: true})
         }
         const fakeimage = (teks) => {
-               return  xinz.sendMessage(from, fs.readFileSync(setting.pathImg), MessageType.image,
+               return  xinz.sendMessage(from, fs.readFileSync(setting.setting.pathImg), MessageType.image,
                 {
                 quoted: {
                 key: {
@@ -191,12 +213,13 @@ module.exports = async(xinz, msg, blocked, baterai, _afk, welcome, left) => {
                 message: { "imageMessage": {
                 "mimetype": "image/jpeg", 
                 "caption": setting.fake, 
-                "jpegThumbnail": fs.readFileSync(setting.pathImg)
+                "jpegThumbnail": fs.readFileSync(setting.setting.pathImg)
                 }
            }
      },
      caption: teks,
-     thumbnail: fs.readFileSync(setting.pathImg)
+     thumbnail: fs.readFileSync(setting.setting.pathImg),
+     contextInfo: {"forwardingScore":999,"isForwarded":true},sendEphemeral: true
      })
 }
 
@@ -1116,7 +1139,18 @@ module.exports = async(xinz, msg, blocked, baterai, _afk, welcome, left) => {
                 break
             case prefix+'owner':
             case prefix+'creator':
-                xinz.sendContact(from, ownerNumber.split("@")[0], setting.ownerName, msg)
+                let owner_list = []
+for (let i of ownerNumber) {
+const vname = xinz.contacts[i] != undefined ? xinz.contacts[i].vname || xinz.contacts[i].notify : undefined
+owner_list.push({
+"displayName": `Developer ${setting.botName}`,
+"vcard": `BEGIN:VCARD\nVERSION:3.0\nN:Sy;;;;\nFN:${vname ? `${vname}` : `${xinz.user.name}`}\nitem1.TEL;waid=${i.split('@')[0]}:${i.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD`
+})
+}
+xinz.sendMessage(from, {
+"displayName": `Developer ${setting.botName}`,
+"contacts": owner_list 
+}, 'contactsArrayMessage', { quoted: fgclink, contextInfo: { forwardingScore: 508, isForwarded: true }})
                 .then((res) => xinz.sendMessage(from, 'Nih kontak ownerku', text, {quoted: res}))
                 break
             case prefix+'ping':
