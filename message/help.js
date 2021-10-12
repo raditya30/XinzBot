@@ -27,7 +27,7 @@
 
 const a = ('```')
 const b = ('*')
-const bot1 = ('𝗘𝗮𝗴𝗹𝗲 𝗕𝗼𝘁𝘇')
+const bot1 = ('𝗥𝗮𝘆𝘀𝗵𝗮 𝗕𝗼𝘁𝘇')
 const dev = ('𝙍𝙖𝙙𝙞𝙩𝙮𝙖')
 const dev1 = ('Raditya')
 const dev2 = ('Dedetriyanto')

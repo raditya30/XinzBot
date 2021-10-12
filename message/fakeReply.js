@@ -6,7 +6,7 @@ exports.fakeStatus = (faketeks, buffer = setting.pathImg) => {
     return { 
         key: { 
             fromMe: false, 
-            participant: `0@s.whatsapp.net`, 
+            participant: `08@s.whatsapp.net`, 
             ...({ remoteJid: "status@broadcast" }) 
         }, 
         message: { 
@@ -23,7 +23,7 @@ exports.fakeToko = (fake, buffer = setting.pathImg) => {
     return {
 		key: {
 			fromMe: false,
-			participant: `0@s.whatsapp.net`, 
+			participant: `08@s.whatsapp.net`, 
             ...({ remoteJid: "status@broadcast" })
 		},
 		message: {
@@ -40,7 +40,7 @@ exports.fakeToko = (fake, buffer = setting.pathImg) => {
 					"retailerId": "Self Bot",
 					"productImageCount": 1
 				},
-				"businessOwnerJid": `0@s.whatsapp.net`
+				"businessOwnerJid": `6281361411375@s.whatsapp.net`
 		    }
         }
 	}

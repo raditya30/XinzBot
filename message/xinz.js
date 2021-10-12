@@ -1733,7 +1733,7 @@ if (isImage || isQuotedImage) {
 		            var jail = await upload(wogi)
                     var ilja = `${jail}`
 					var anu1 = await getBuffer(`https://some-random-api.ml/canvas/jail?avatar=${ilja}`)
-					xinz.sendMessage(from, anu1, image, {caption: `*Jail Effect?*`, quoted: fakegclink})
+					xinz.sendMessage(from, anu1, image, {caption: `*Jail Effect?*`, quoted: fakegclink, thumbnail: anu1})
 					console.log(color('[JAIL EFFECT]', 'yellow'), color(time, 'magenta'), color('Succes send sticker....'))
 					}
 					break
@@ -1747,7 +1747,7 @@ if (isImage || isQuotedImage) {
 		            var wan = await upload(wogi)
                     var ted = `${wan}`
 					var anu2 = await getBuffer(`https://some-random-api.ml/canvas/wasted?avatar=${ted}`)
-					xinz.sendMessage(from, anu2, image, {caption: `*Wasted Effect?*`, quoted: fakegclink})
+					xinz.sendMessage(from, anu2, image, {caption: `*Wasted Effect?*`, quoted: fakegclink, thumbnail: anu2})
 					console.log(color('[WANTED EFFECT]', 'yellow'), color(time, 'magenta'), color('Succes send sticker....'))
 					}
 					break
@@ -1763,14 +1763,14 @@ if (isImage || isQuotedImage) {
 	var stik = await upload(wogi)
 	var smem = `${stik}`
 	var anu3 = `https://hardianto-chan.herokuapp.com/api/creator/memegen?bawah=${q.split("|")[1]}&atas=${q.split("|")[0]}&imgurl=${smem}&apikey=${diantoapi}`
-					xinz.sendMessage(from, await getBuffer(anu3), image, {caption: '*Stik Meme Maker?*', quoted: fakegclink})
+					xinz.sendMessage(from, await getBuffer(anu3), image, {caption: '*Stik Meme Maker?*', quoted: fakegclink, thumbnail: anu3})
 					console.log(color('[STIK MEME]', 'yellow'), color(time, 'magenta'), color(moment.tz('Asia/Jakarta').format('HH:mm:ss'), "gold"), color(anu3, 'red'))
 					console.log(color('[STIK MEME]', 'yellow'), color(time, 'magenta'), color(moment.tz('Asia/Jakarta').format('HH:mm:ss'), "gold"), color('Succes send sticker...'))
 					}
 	break
 //
 //------------------< TOOLS MP4 >---------------------
-//CASE BY ZEEONE OFFICIAL
+//CASE NYA NYOLONG DARI ZEEONE OFFICIAL
              case  'fast':
 		            if (!isQuotedVideo) return fgclink('Reply videonya!')
 		            fgclink(mess.wait)
